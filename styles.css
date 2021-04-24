@@ -189,7 +189,7 @@ button:hover {
   transform: translateY(150px) ;
   opacity: 0;
   animation: appear 1s normal forwards ease-in-out  ;
-  animation-delay: 2.5s;
+  animation-delay: 0s;
 }
 
 @keyframes appear{
@@ -593,4 +593,230 @@ a:hover{
 .reveal.active{
   transform: translateY(0px);
   opacity: 1;
+}
+
+
+/* MOBILE DESIGN STARTING FROM HERE */
+
+@media only screen and (max-width:480px) {
+
+  .eye{
+    display: none;
+  }
+
+  .navbar-brand{
+    width: 60%;
+  }
+  
+  h1{
+    font-size: 72px;
+    
+  }
+
+  .blob{
+    width: 0;
+  }
+
+  p{
+    width: 70%;
+    margin-left: 4em;
+  }
+
+  .content button{
+    position: absolute;
+    top: 45em;
+    left: 7em;
+  }
+
+  .tag{
+    font-size: 15px;
+  }
+
+  /* HIRE SECTION HERE */
+
+  .Hire h2{
+    padding-top: 7em;
+    font-size: 35px;
+    width: 85%;
+    margin-left: 1em;
+  }
+
+  .Hire p{
+    width: 75%;
+    margin-left: 3.5em;
+  }
+
+
+  /* SKILLS SECTION HERE */
+
+  .front h1{
+    font-size: 45px;
+  }
+
+  .front-img{
+    position: relative;
+    bottom: 4em;
+  }
+  .front .container{
+    border-radius: 2em;
+  padding-bottom: 0rem  ;
+  
+  }
+  .container h2{
+    font-size: 40px;
+    padding-top: 0;
+  }
+  .Books{
+    width: 7%; 
+  }
+
+  .shelf{
+    width: 55%;
+    position: relative;
+    top: 7em;
+    right: 4em;
+  }
+  .mobile{
+    padding: 0 2em 0 2em ;
+    height: ;
+  }
+
+  .b1{
+    position: relative;
+    top:4em;
+    left: 5.5em;
+  }
+  .b2{
+    position: relative;
+    top:2em;
+    left: 5.5em;
+  }
+
+  .b3{
+    position: relative;
+    top:3.6em;
+    left: 5.5em;
+  }
+
+  .b4{
+    position: relative;
+    top:3.2em;
+    left: 5.5em;
+  }
+
+  .b5{
+    position: relative;
+    top:1.2em;
+    left: 5.5em;
+  }
+
+  .front h4{
+    margin-left: 1em;
+    font-size: 15px;
+    width: 90%;
+    padding-bottom: 2em;
+  }
+
+
+  .back .container{
+    border-radius: 2em;
+  }
+
+  .back .shelf{
+    width: 65%;
+    position: absolute;
+    top: 28em;
+  }
+
+  .f1{
+    position: relative;
+    width: 1.5em;
+    top:1.45em ;
+    left: 0.1em
+  }
+
+  .f2{
+    width: 1.5em;
+    position: relative;
+    top:0.5em ;
+    left: 0.1em
+  }
+  .f3{
+    position: relative;
+    top: 1em;
+    width: 1.5em;
+  }
+  .f4{
+    position: relative;
+    top: 1.89em;
+    width: 1.5em;
+  }
+  .f5{
+    position: relative;
+    top: 1.5em;
+    width: 1.5em;
+  }
+  .f6{
+    position: relative;
+    top: -2em;
+    width: 1.5em;
+  }
+  .f7{
+    position: relative;
+    top: 0.5em;
+    left: -0.2em;
+    width: 1em;
+  }
+  .f8{
+    position: relative;
+    top: 2em;
+    left:0.5em;
+    width: 1.5em;
+  }
+  .mobile-img{
+    position: relative;
+    top: 5em;
+    right: 1em;
+    padding-bottom: 0;
+  }
+
+  .back h4{
+
+    margin-left: 1.5em;
+    width: 90%;
+    font-size: 15px;
+    padding-bottom: 0;
+  }
+
+
+  /* SERVICES STRT HERE */
+
+  .card1{
+    position: relative;
+    left: 1.5em;
+  }
+  .mobile-card{
+    padding-bottom: 5em;
+  }
+
+  .card2{
+    position: relative;
+    margin-left: 3.5em;
+  }
+
+  /* HIRING SECTION STARTS HERE */
+
+  .contact h2{
+    font-size: 45px;
+  }
+
+  .navbar-nav a{
+    display: inline;
+   }
+
+  .nav-link{
+    margin-left: 1em;
+    margin-right: 0;
+  }
+
 }
