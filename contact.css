@@ -191,3 +191,23 @@ button:hover {
       position: relative;
       
   }
+
+
+  /* ANIMATION */
+
+  .on-spot{
+    transform: translateY(150px) ;
+    opacity: 0;
+    animation: appear 1s normal forwards ease-in-out ;
+  }
+
+  @keyframes appear{
+      from{
+          transform: translateY(150px) ;
+          opacity: 0;
+      }
+      to{
+          transform: translateY(0) ;
+          opacity: 1;
+      }
+  }
