@@ -83,6 +83,9 @@ body{
   width: 100%;
 }
 
+.navbar-nav a{
+  display: inline;
+}
 
 
 /* CONTENT STRTED */
@@ -189,7 +192,7 @@ button:hover {
   transform: translateY(150px) ;
   opacity: 0;
   animation: appear 1s normal forwards ease-in-out  ;
-  animation-delay: 0s;
+  animation-delay: 2.5s;
 }
 
 @keyframes appear{
