@@ -9,6 +9,7 @@ body{
     z-index: 1000;
 }
 .nav-link{
+    display: inline;
     position: relative;
     left: 38em;
     margin-left: 5em;
@@ -210,4 +211,63 @@ button:hover {
           transform: translateY(0) ;
           opacity: 1;
       }
+  }
+
+
+  @media only screen and (max-width :425px){
+
+    .eye{
+      display: none;
+    }
+    .navbar{
+      padding: 1.5em ;
+    }
+  
+    .navbar-brand{
+      width: 45%;
+      margin-left: 0.5em;
+      position: absolute;
+    }
+
+    .nav-link{
+      position: relative;
+      left: 7em;
+      display: inline;
+      margin: 0;
+    }
+
+    .navbar-nav a{
+      margin: 1em;
+    }
+
+    .form h2{
+      font-size: 50px;
+      text-align: center;
+      margin: 0 auto 0 auto;
+      width: 90%;
+    }
+
+    .form p{
+      padding-top: 1.5em;
+      font-size: 12px;
+      
+    }
+
+    .contactimg{
+      position: absolute;
+      visibility: hidden;
+      width: 0;
+    
+    }
+
+    .container1{
+      padding-top: 1em;
+      margin: 0;
+      
+    }
+    .container{
+      padding: 0 1em 1em 1em;
+    }
+
+
   }
