@@ -336,9 +336,7 @@ button:hover {
      }
 
      .arrow{
-       position: absolute;
-       left: 0;
-       top: 6em;
-       width: 20%;
+       visibility: hidden;
+       width: 0;
      }
   }
