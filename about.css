@@ -14,6 +14,10 @@ body{
       font-weight: 500;
   }
 
+  .navbar-nav a{
+    display: inline;
+  }
+  
   .navbar-brand{
       margin-left: 3em;
   }
@@ -57,11 +61,12 @@ body{
       margin-left: -3em;
             
   }
-.blob{
+.about .blob{
     position: absolute;
     top: 14em;
     left: 8rem;
     z-index: -1;   
+    width: 38%;
 }
 
 h2{
@@ -246,4 +251,94 @@ button:hover {
           transform: translateY(0) ;
           opacity: 1;
       }
+  }
+
+
+
+
+  /* MOBILE DESIGNING BEGGINING */
+
+  @media only screen and (max-width:425px){
+
+  
+    .eye{
+      display: none;
+      
+    }
+    .navbar{
+      padding: 1.2em;
+    }
+    .navbar-nav a{
+      position: relative;
+      left: 7em;
+      margin-left:1.5em ;
+      
+    }
+    .navbar-brand{
+      position: absolute;
+      width: 60%;
+      margin-left: 1.5em;
+    }
+    
+    .about .blob{
+      width: 0%; 
+    }
+
+    .container img{
+      margin: 0 auto 0 auto;
+    }
+    
+    .about h2{
+      font-size: 35px;
+      width: 95%;
+      
+    }
+
+    /* LOVE SECTION IS HERE */
+
+    .love h2{
+      text-align: center;
+      padding: 4em 0 3em 0;
+     font-size: 40px;
+    }
+
+   .mobile-img1 img{
+    padding-right: 1em;
+   }
+
+   .mobile-img2 img{
+    padding-top:1em ;
+    padding-right: 1em;
+   }
+    .photo-heading{
+    margin-top: -1em;
+    }
+
+    .mobile-img3 img{
+      padding-top:1em ;
+      padding-right: 2.5em;
+     }
+     
+     .travel{
+       margin: 0;
+     }
+
+
+     /* HIRE SECTION HERE */
+
+     .mobilediv{
+       padding-top: -1em;
+       margin: 0 1em 0 1em;
+     }
+
+     .container h2{
+       font-size: 30px;
+     }
+
+     .arrow{
+       position: absolute;
+       left: 0;
+       top: 6em;
+       width: 20%;
+     }
   }
