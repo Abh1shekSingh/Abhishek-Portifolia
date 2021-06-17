@@ -1,0 +1,895 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #e8505b;
+}
+span { 
+    position: relative;
+    transform: rotate(90deg);
+    width: 1px;
+    height: 1px;
+    right:2em;
+    background-color: white;
+    position: fixed;
+    animation-name: particleAnimation;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+  
+span::before{ 
+    position: absolute;
+    display: block;
+    content: "";
+    width: 150px;
+    right: 1px;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,#fff 100%); 
+}
+
+span:nth-of-type(1) { top: 25%; animation-duration: 10s; left: 40em; }
+span:nth-of-type(2) { top: 50%; animation-duration: 5s; left: 60em; }
+span:nth-of-type(3) { top: 75%; animation-duration: 20s; left: 70em;}
+span:nth-of-type(4) { top: 75%; animation-duration: 5s; left: 10em;}
+span:nth-of-type(5) { top: 75%; animation-duration: 10s; left: 2em;}
+span:nth-of-type(6) { top: 75%; animation-duration: 10s; left: 90em;}
+
+@keyframes particleAnimation {
+	from {
+		top: -200px;
+	}
+	to {
+		top: calc(100% + 100px);
+        
+	}
+}
+
+
+.top{
+  
+    background: #ED8F03;  /* fallback for old browsers */
+/* background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E); 
+background: linear-gradient(to right, #ED8F03, #FFB75E); */
+
+    text-align: center;
+    padding: 2em 0em 2em 0em;
+    height: 115vh;
+    box-shadow: inset 0px 11px -100px 11px rgb(189, 67, 67);
+    
+}
+.link {
+    color: #efefef;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 1em;
+    font-family: 'poppins',sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing:0.15em ;
+    position: relative;
+    z-index: 1;
+}
+
+.link:hover{
+    color: #efefef;
+    transform: scale(1);
+}
+
+.link::after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: -0em;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .link:hover::after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+.top i{
+    color: #efefef;
+    display: inline-flex;
+    position: relative;
+    left: 31.2em;
+    margin-right: 1em;
+}
+
+.hamburger{
+    visibility: hidden;
+}
+
+.top h4{
+    color: #efefef;
+    font-family: 'Kaushan Script', cursive;
+    display: inline;
+    position: relative;
+    right: 16em;
+    font-size: 30px;
+}
+ 
+.top a{
+    text-decoration: none;
+}
+
+.top video{
+   mix-blend-mode: screen;
+   height: 90vh;
+   position: relative;
+   bottom: 2.5em;
+ 
+}
+
+.image{
+    position: absolute;
+    left: 33em;
+    top: 2em;
+    transform: scale(1);
+    opacity: 1;
+    animation: intro 1s ease-in-out ;
+    transform-origin: center;
+}
+
+.mobile_image{
+    width: 0;
+    
+    visibility: hidden;
+}
+@keyframes intro {
+    0%{
+        transform: scale(0.8);
+        opacity: 0;  
+        width: 0;
+    }
+    
+    100%{
+        transform: scale(1);
+        opacity: 1; 
+        
+    }
+}
+
+
+.top .arrow{
+    left: -17em;
+    top: -1em;
+    opacity: 0;
+    animation: arrow 1s infinite ease alternate ;
+    animation-delay: 5s;
+}
+
+@keyframes arrow {
+    from{
+       top: -1em;
+       opacity: 1;
+    }
+    to{
+       top:0em;
+       opacity: 0.6;
+    }
+    
+}
+/* HIRE SECTION STARTING HERE */
+.Hire{
+   height: 100vh;
+}
+.Hire img:nth-child(1){
+    position: absolute;
+    top: 38em;
+    width: 100%;
+    
+    
+}
+.Hire img:nth-child(2){
+    position: absolute;
+    top: 36em;
+    width: 100%;
+    
+}
+
+
+.Hire .wave{
+    position: absolute;
+    left: 0;
+    top: 47em;
+    width: 100%;
+    height: 100px;
+    background: url(Images/wave.png);
+    background-size: 1000px 100px;
+}
+
+.Hire .wave.wave1{
+    animation: animate 20s linear infinite;
+    z-index: 1000;
+    animation-delay: 0s;
+    opacity: 1;
+}
+
+.Hire .wave.wave2{
+    animation: animate1 15s linear infinite;
+    z-index: 999;
+    animation-delay: -5s;
+    opacity: 0.9;
+    bottom: 10px;
+}
+
+.Hire .wave.wave3{
+    animation: animate 10s linear infinite;
+    z-index: 998;
+    animation-delay: -5s;
+    opacity: 0.5;
+    bottom: 15px;
+}
+
+.Hire .wave.wave4{
+    animation: animate1 5s linear infinite;
+    z-index: 997;
+    animation-delay: -5s;
+    opacity: 0.3;
+    bottom: 20px;
+}
+@keyframes animate{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate1{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
+
+.hirecontent p{
+    position: relative;
+    z-index: 1000;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: bolder;
+    font-size: 70px;
+    line-height: 1.5;
+    padding-left: 1.5em;
+    color: #222;
+    margin-top: 2em;
+    margin-left: .8em;
+    color: #212121;
+}
+
+.hirecontent p:nth-child(2){
+    position: relative;
+    z-index: 1000;
+    font-family: 'poppins',sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5;
+    padding-left: 1em;
+    width: 35%;
+    margin-left: 10em;
+
+}
+
+.hirecontent img{
+    position: absolute;
+    top: 65em;
+    left: 50em;
+    z-index: 1000;
+}
+
+.eye1{
+    background-color: #3F3D56;
+    position: absolute;
+    z-index: 9999;
+    height: 25px;
+    width: 25px;
+    top: 69.8em;
+    left: 69.8em;
+    
+    border-radius: 50%;
+}
+.eye1:after { /*pupil*/
+    position: absolute;
+    bottom: 4px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    content: " ";
+  }
+
+  .eye2{
+    background-color: #3F3D56;
+    position: absolute;
+    z-index: 9999;
+    height: 25px;
+    width: 25px;
+    top: 69.8em;
+    left: 73.98em;
+    
+    border-radius: 50%;
+}
+.eye2:after { /*pupil*/
+    position: absolute;
+    bottom: 4px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    content: " ";
+  }
+
+  .contact-box{
+    
+    border-color: #3F3D56;
+    border-width: .2em;
+    border-style: solid;
+    width: 31vw;
+    height: 10vh;
+    position: relative;
+    z-index: 1000;
+    left: 10.2em;
+    top: 2em;
+    
+  }
+  .contact-box::after{
+      content: " ";
+      width: 0vh;
+      height: 9.5vh;
+      border-color: #3F3D56;
+      border-style: solid;
+      border-width: .1em;
+      position: absolute;
+      left: 5em;
+      top: -0.1em;
+  }
+
+  .contact-box i{
+      position: relative;
+      left: 2em;
+      top: 1.2em;
+      color: #3F3D56;
+  }
+
+  .contact-box a{
+      text-decoration: none;
+      color: #3F3D56;
+      position: relative;
+      top: 1.2em;
+      left: 6em;
+      font-family: 'poppins',sans-serif;
+      font-weight: bold;
+      
+  }
+  .contact-box a:hover{
+      color: #3F3D56;
+     
+  }
+
+  .contact-box:hover{
+      cursor: pointer;
+      
+  }
+.contact-box .hover-active{
+    position: absolute;
+    left: 2.1em;
+    top: 1.5em;
+    opacity: 0;
+}
+  .hover-active i:nth-child(1){
+     visibility: hidden;
+  }
+
+  .hover-active i:nth-child(2){
+      opacity: 1;
+  }
+
+  .catvoicearea{
+      width: 15vw;
+      height: 35vh;
+      
+      position: absolute;
+      left: 68em;
+      top: 66em;
+      z-index: 10000;
+      opacity: 0;
+  }
+      
+
+
+  /* STYLING OF SKILLS SECTION IS FROM HERE */
+
+  .skills{
+      text-align: center;
+    background: #ED8F03;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E); 
+    background: linear-gradient(to right, #ED8F03, #FFB75E); */   
+    
+  }
+ 
+  /*  */
+.skill1 .title{
+    padding: 0;
+    padding-top: 5em;
+}
+
+.skill1 .body{
+    padding-bottom:4em ;
+    padding-top: 0;
+}
+  .skills h3{
+      color: #fff;
+      font-family: "Montserrat",sans-serif;
+      font-weight: 900;
+      padding-top: 3em;
+  }
+
+  .skills p{
+      color: #fff;
+      font-family: "poppins",sans-serif;
+      padding-bottom: 7em;
+  }
+
+  .row{
+      position: relative;
+      left:-1em;
+      
+      
+  }
+
+  .box{
+      border-color: white;
+      border-width: 1px;
+      border-style: solid;
+      padding:1em;
+      z-index: 1000;
+      transition: 0.5s ease;
+      width: 25rem;
+      
+  }
+  .box-text{
+      text-align: left;
+      font-family: "poppins",sans-serif;
+      padding-top: 1em;
+      font-weight: 900;
+      
+  }
+  .col-xl-6, .col{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 3em;
+  }
+.col{
+    padding-bottom: 15em;
+}
+  .box-body p{
+    text-align: left;
+    font-family: "poppins",sans-serif;  
+    padding: 1em 0 0 1em;  
+  }
+
+  .text{
+    font-size: 14px;
+  }
+
+  .box:hover{
+      transform: scale(0.95);
+        box-shadow: 11px 11px 220px  #FFB75E;
+  }
+
+
+
+  /* GET IN TOUCH SECTION */
+
+  .Get_in_touch{
+      background-color: #fff;
+      width: 100%;
+      height: 63vh;
+  }
+  .Get_in_touch img{
+      position: absolute;
+      top:225em;
+      left: 10em;
+  }
+
+  .Get_in_touch h1{
+      color: #212121;
+      font-family: "Montserrat",sans-serif;
+      font-weight: bold;
+      font-size: 50px;
+      padding: 1em 0 0.5em 0;
+      margin-left: 16em;
+  }
+
+  .Get_in_touch p{
+      margin-left: 50em;
+      font-family: "poppins",sans-serif;
+      font-size: 16px;
+      padding-bottom: 1em;
+  }
+
+  .Get_in_touch strong{
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+
+  button,
+button::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.Get_in_touch button {
+    position: relative;
+    left: 40em;
+    background: none;
+    border: 3px solid #ED8F03;
+    border-radius: 5px;
+    color: #ED8F03;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1em auto;
+    padding: 1em 3em;
+    position: relative;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+.Get_in_touch button:hover{
+    border-radius:50px ;
+    background: #ED8F03;
+    color: #ED8F03;
+    
+}
+.Get_in_touch button::after{
+    position: absolute;
+    right: 0em;
+    top: 0.02em;
+    width: 100%;
+    height: 69px;
+    
+    border-radius: 5px;
+}
+  .Get_in_touch button:hover::after{
+      text-transform: uppercase;
+      top:1.2em;
+      content: "Let's Do This";
+      font-size: 17px;
+      color: #efefef;
+      font-weight: 400;
+      font-weight: bold;
+  }
+  
+
+
+  /* FOOTER STARTING FROM GHERE */
+
+  .footer{
+      background-color: #efefef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+  }
+ .footer h1{
+     font-family: "Kaushan Script",sans-serif;
+     font-size: 7em;
+     padding: 1em 0 1em 0;
+     transform: rotate(-7deg);
+     color: #fff;
+ }
+.rock{
+    position: absolute;
+    display:flex;
+    width: 45%;
+    top: 258em;
+    overflow: hidden;
+    transform: translateY(15em);
+    opacity: 0;
+    transition: 1s;
+}
+ .active{
+     transform: translateY(0);
+     opacity:1;
+     
+ }
+
+ .headline{
+     background-color: #fff;
+     height: 6vh;
+     width: 100%;
+ }
+ .headline p{
+     text-align: left;
+     padding: 1.2em 0 0.5em 0em;
+     margin-left:5em ;
+     font-family: "poppins",sans-serif;
+     color: #212121;
+     font-size: 12px;
+ }
+
+ .social__handles{
+     color: #212121;
+     position: absolute;
+     top: 281.5em;
+     left: 88em;
+ }
+
+ .social__handles i{
+     margin-right: 0.5em;
+     font-weight: 700;
+ }
+ .headline a{
+     color: #212121;
+ }
+
+ .headline a:hover{
+     color:#212121;
+ }
+ 
+
+ @media (max-width:452px) {
+
+    span{
+        width: 12px;
+        height: 3px;
+    }
+    span::before{
+        width: 120px;
+       height: 3px;
+    }
+     .top{
+         height: 400vh;
+         width: 343%;
+     }
+
+     .link{
+         width: 0;
+         visibility: hidden;
+         overflow: hidden;
+     }
+
+     .top h4{
+         right: 4.5em;
+         top: .5em;
+         font-size: 5.5em;
+         
+     }
+     .fab{
+        width: 0;
+        visibility: hidden;
+     }
+
+     .hamburger{
+         visibility: visible;
+         font-size: 4em;    
+         color: #3F3D56;
+        position: absolute;
+        right: 16em;
+        top: 1.2em;
+    }
+
+
+     .top video{
+         width: 100%;
+         height: 110vh;
+         bottom: 0;
+         top: 35em ;
+         
+     }
+
+     .top .arrow{
+
+        animation: none;
+        left: 1em;
+        top: 17em;
+        opacity: 1;
+        font-size: 70px;
+        color: white;
+       
+    }
+
+
+     .image{
+         width: 0;
+         height: 0;
+         visibility: hidden;
+         
+     }
+     .mobile_image{
+         
+        visibility: visible;
+        width: 200%;
+        position: absolute;
+        left: 15em;
+        top: 28em;
+        transform: scale(1);
+        opacity: 1;
+        animation: intro1 1s ease-in-out ;
+        transform-origin: center;
+       
+    }
+    @keyframes intro1 {
+        0%{
+            transform: scale(0.8);
+            opacity: 0;  
+            
+        }
+        
+        100%{
+            transform: scale(1);
+            opacity: 1; 
+            
+        }
+    }
+
+    .Hire{
+        height: 400vh;
+        width: 343%;
+    }
+
+    .hirecontent p{
+        text-align: center;
+        font-size: 110px;
+        padding-left: 0;
+        font-weight: bold;
+        margin: 0 1em 0 1em;
+        padding-top: 2em;
+    }
+
+    .hirecontent p:nth-child(2){
+        font-size: 50px;
+        padding-left: 0;
+        width: 75%;
+        top: 12em;
+        margin:0 auto 0 auto ;
+    }
+    .hirecontent img{
+        top: 220em;
+        width: 250%;
+        left: 10em;
+    }
+
+    .eye1{
+        top: 227.5em;
+        left: 42em;
+        width: 40px;
+        height: 40px;
+    }
+    .eye2{
+        top: 227.5em;
+        left: 49em;
+        width: 40px;
+        height: 40px;
+    }
+    .eye1:after {
+        width: 15px;
+    height: 15px;
+    }
+    .eye2:after {
+        width: 15px;
+    height: 15px;
+    }
+
+    .Hire .wave{
+        top: 155em;
+        width: 343%;
+    }
+
+    .contact-box{
+        top: 50em;
+        left: 0em;
+        margin: 0 auto 0 auto;
+        width: 30em;
+        transform: scale(2.5);
+    }
+
+   .skills{
+       width: 343%;
+   }
+
+   .box{
+       width: 60rem;
+       height: 70rem;
+   }
+
+   .skill1 .title{
+       font-size: 50px;
+       padding-top: 3em;
+   }
+
+   .skill1 .body{
+       font-size: 60px;
+   }
+
+   .box-text{
+       font-size: 50px;
+   }
+   .box-body p{
+       font-size: 35px;
+   }
+
+   .Get_in_touch{
+       width: 343%;
+       height: 350vh;
+       text-align: center;
+   }
+
+   .Get_in_touch img{
+       left: 0;
+       top: 770em;
+       width: 250%;
+       margin: 0 auto 0 auto;
+   }
+
+   .Get_in_touch h1{
+       margin: 0 auto 0 auto;
+       font-size: 100px;
+   }
+
+   .Get_in_touch p{
+       margin: 0 auto 0 auto;
+       font-size: 50px;
+       padding-bottom: 5em;
+   }
+
+   .Get_in_touch button{
+       left: 0;
+       top: 20em;
+       font-size: 50px;
+   }
+
+   .Get_in_touch button:hover::after{
+       top: 1em;
+       font-size: 50px;
+   }
+   .footer{
+       width: 343%;
+       
+   }
+
+   .footer h1{
+       font-size: 10em;
+   }
+   .rock{
+       top: 900em;
+       width: 0;
+   }
+
+   .headline{
+       width: 343%;
+       height: 20vh;
+       text-align: center;
+   }
+
+   .headline p{
+       text-align: center;
+       font-size: 40px;
+       margin: 0 auto 0 auto;
+   }
+   .social__handles{
+       width: 100%;
+       font-size: 50px;
+       text-align: center;
+       left: 10.5em;
+       top: 292em;
+       padding-bottom: 1em;
+       
+   }
+}
